@@ -1,0 +1,19 @@
+development: &default
+ adapter: mysql2
+ host: localhost
+ encoding: utf8mb4
+ reconnect: false
+ database: beauty_parlour_development 
+ pool: 5
+ username: root
+ password: root
+
+test:
+ <<: *default
+ database: beauty_parlour_test
+
+
+production:
+ <<: *default
+ database: beauty_parlour_production
+
